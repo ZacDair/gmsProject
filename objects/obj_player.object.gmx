@@ -37,6 +37,9 @@ idle_side = 1
 
 //Player's interaction reach
 range = 100
+
+//Player paused value to stop the player in UI etc
+paused = false;
 </string>
           </argument>
         </arguments>
@@ -59,11 +62,17 @@ range = 100
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Run our keyboard control script
-scr_player_keyboard_controls();
+            <string>if (paused){
+    move_speed = 0;
+    speed = 0;
+}
+else{
+    //Run our keyboard control script
+    scr_player_keyboard_controls();
 
-//Run our collision checking script
-scr_check_collision_solid_block_old();
+    //Run our collision checking script
+    scr_check_collision_solid_block_old();
+}
 </string>
           </argument>
         </arguments>
@@ -88,7 +97,11 @@ scr_check_collision_solid_block_old();
             <kind>1</kind>
             <string>//Check if there is an interactable within range
 if (distance_to_object(obj_interactable) &lt; range){
-    
+    //Toggle paused to false if it's true
+    if(paused){
+        paused = false;
+        move_speed = 4;
+    }
     //Get the nearest instance of interactables
     objParent = instance_nearest(x, y, obj_interactable);
     

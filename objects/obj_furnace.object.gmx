@@ -92,6 +92,7 @@ if(drawUI){
             <kind>1</kind>
             <string>if drawUI = true{
     spr_index = draw_sprite(spr_furnace_ui, 0, 100, 100);
+    obj_player.paused = true;
 }
 </string>
           </argument>
