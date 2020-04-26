@@ -26,9 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>draw_sprite(spr_hotbar, 0, 0, 704);
-draw_sprite(spr_hoe, 0, 0, 700);
-draw_sprite(spr_seeds, 0, 70, 700);
-draw_sprite(spr_water, 0, 140, 700);
+draw_sprite(spr_hoe, 0, 3, 700);
+draw_sprite(spr_seeds, 0, 73, 700);
+draw_sprite(spr_water, 0, 143, 700);
+draw_sprite(spr_basket, 0, 213, 700);
+if(obj_plot.cabbage = 1){
+    draw_sprite(spr_cabbage_inv, 0, 283, 700);    
+}
+if(obj_plot.cabbage_count &gt; 0){
+    draw_text(340, 750, string(obj_plot.cabbage_count));
+}
 </string>
           </argument>
         </arguments>

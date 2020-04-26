@@ -26,6 +26,31 @@
           <argument>
             <kind>1</kind>
             <string>times_watered = 0;
+cabbage = 0;
+cabbage_count = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.sprite_index = spr_grass;
 </string>
           </argument>
         </arguments>
@@ -106,13 +131,19 @@ if distance_to_object(obj_player) &lt; range{
         if(times_watered &lt; 3){
             self.sprite_index = spr_watered;
             times_watered += 1;
-            alarm_set(0, room_speed*3);
+            alarm_set(0, room_speed);
         }
         if(times_watered = 3){
             times_watered = 0;
             self.sprite_index = spr_watered;
-            alarm_set(1, room_speed*3);
+            alarm_set(1, room_speed);
         }
+    }
+    if(obj_select_hotbar.inventory = 4 &amp;&amp; self.sprite_index = spr_cabbage){
+        self.sprite_index = spr_ploughed;
+        cabbage = 1;
+        cabbage_count += 1;
+        alarm_set(2, room_speed*3);
     }
 }
 </string>

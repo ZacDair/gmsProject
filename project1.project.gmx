@@ -22,6 +22,7 @@
     <sprite>sprites\spr_watered</sprite>
     <sprite>sprites\spr_cabbage</sprite>
     <sprite>sprites\spr_basket</sprite>
+    <sprite>sprites\spr_cabbage_inv</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
