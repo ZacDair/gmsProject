@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>inventory = 1;
+
+count = 1;
+items[count] = "Hoe"
+count -= 1;
+items[count] = "Seeds"
 </string>
           </argument>
         </arguments>

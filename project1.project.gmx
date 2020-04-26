@@ -16,6 +16,12 @@
     <sprite>sprites\spr_hotbar</sprite>
     <sprite>sprites\spr_select_hotbar</sprite>
     <sprite>sprites\spr_hoe</sprite>
+    <sprite>sprites\spr_seeded</sprite>
+    <sprite>sprites\spr_seeds</sprite>
+    <sprite>sprites\spr_water</sprite>
+    <sprite>sprites\spr_watered</sprite>
+    <sprite>sprites\spr_cabbage</sprite>
+    <sprite>sprites\spr_basket</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
