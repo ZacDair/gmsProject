@@ -27,6 +27,8 @@
             <kind>1</kind>
             <string>draw_sprite(spr_hotbar, 0, 0, 704);
 draw_sprite(spr_hoe, 0, 0, 700);
+draw_sprite(spr_seeds, 0, 70, 700);
+draw_sprite(spr_water, 0, 140, 700);
 </string>
           </argument>
         </arguments>
