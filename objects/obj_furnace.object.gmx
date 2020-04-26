@@ -41,7 +41,7 @@
             <kind>1</kind>
             <string>//Init Variables
 drawUI = false;
-triggered = false;
+spr_index = -1;
 </string>
           </argument>
         </arguments>
@@ -65,9 +65,8 @@ triggered = false;
           <argument>
             <kind>1</kind>
             <string>//if drawUI is true display a message, only run once
-if(drawUI and !triggered){
+if(drawUI){
     show_debug_message("drawn");
-    triggered = true;
 }
 </string>
           </argument>
@@ -91,8 +90,8 @@ if(drawUI and !triggered){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(drawUI = true){
-    draw_sprite(spr_furnace_ui, 0, 100, 100);
+            <string>if drawUI = true{
+    spr_index = draw_sprite(spr_furnace_ui, 0, 100, 100);
 }
 </string>
           </argument>

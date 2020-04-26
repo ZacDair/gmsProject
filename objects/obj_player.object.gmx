@@ -26,10 +26,16 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize variables
+
+//Actual move speed and a max speed to prevent diagonal speed increases
 move_speed = 4
 max_speed = 4
+
+//What side is the player facing
 move_side = 0
 idle_side = 1
+
+//Player's interaction reach
 range = 100
 </string>
           </argument>
@@ -53,8 +59,10 @@ range = 100
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_keyboard_controls();
-//scr_player_change_sprites_while_moving();
+            <string>//Run our keyboard control script
+scr_player_keyboard_controls();
+
+//Run our collision checking script
 scr_check_collision_solid_block_old();
 </string>
           </argument>
@@ -78,12 +86,36 @@ scr_check_collision_solid_block_old();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_interactable) &lt; range{
-    obj = instance_nearest(x, y, obj_furnace);
-    obj.sprite_index = spr_furnace_used;
-    obj.drawUI = true;
+            <string>//Check if there is an interactable within range
+if (distance_to_object(obj_interactable) &lt; range){
+    
+    //Get the nearest instance of interactables
+    objParent = instance_nearest(x, y, obj_interactable);
+    
+    //With iterates through all instances of the parent and children objects
+    with(objParent){
+        
+        //Find the first instance that isn't the parent
+        if (object_index != obj_interactable){
+            
+            //Get a reference to the nearest object of that index
+            obj = instance_nearest(x, y, object_index);
+            
+            //If the object is a furnace change sprite and draw UI
+            if (object_index == obj_furnace){
+                if !obj.drawUI = true{
+                    obj.sprite_index = spr_furnace_used;
+                    obj.drawUI = true;
+                }
+                else{
+                    obj.sprite_index = spr_furnace;
+                    obj.drawUI = false;
+                }
+                break;
+            }
+        }
+    }
 }
-//hello github
 </string>
           </argument>
         </arguments>

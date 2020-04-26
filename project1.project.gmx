@@ -34,6 +34,7 @@
     <object>objects\obj_debug</object>
     <object>objects\obj_interactable</object>
     <object>objects\obj_furnace</object>
+    <object>objects\obj_ore</object>
     <object>objects\obj_player</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_plot</object>
@@ -41,8 +42,8 @@
     <object>objects\obj_select_hotbar</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Farm</room>
     <room>rooms\room0</room>
+    <room>rooms\Farm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
