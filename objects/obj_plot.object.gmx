@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>times_watered = 0;
-cabbage = 0;
-cabbage_count = 0;
+//cabbage = 0;
+//cabbage_count = 0;
 </string>
           </argument>
         </arguments>
@@ -141,8 +141,8 @@ if distance_to_object(obj_player) &lt; range{
     }
     if(obj_select_hotbar.inventory = 4 &amp;&amp; self.sprite_index = spr_cabbage){
         self.sprite_index = spr_ploughed;
-        cabbage = 1;
-        cabbage_count += 1;
+        obj_hotbar.cabbage = 1;
+        obj_hotbar.cabbage_count += 1;
         alarm_set(2, room_speed*3);
     }
 }
