@@ -64,11 +64,7 @@ spr_index = -1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//if drawUI is true display a message, only run once
-if(drawUI){
-    show_debug_message("drawn");
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

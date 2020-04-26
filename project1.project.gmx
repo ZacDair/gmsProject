@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_ore</sprite>
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_furnace</sprite>
     <sprite>sprites\spr_furnace_ui</sprite>
@@ -42,8 +43,8 @@
     <object>objects\obj_select_hotbar</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Farm</room>
     <room>rooms\room0</room>
+    <room>rooms\Farm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

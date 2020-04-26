@@ -36,7 +36,7 @@ move_side = 0
 idle_side = 1
 
 //Player's interaction reach
-range = 100
+range = 20
 
 //Player paused value to stop the player in UI etc
 paused = false;
@@ -72,6 +72,12 @@ else{
 
     //Run our collision checking script
     scr_check_collision_solid_block_old();
+    
+    //Find ore objects in range
+    if(distance_to_object(obj_ore) &lt; range){
+        obj = instance_nearest(x, y, obj_ore);
+        obj.inRange = true;    
+    }
 }
 </string>
           </argument>
