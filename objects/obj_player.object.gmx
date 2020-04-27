@@ -26,11 +26,23 @@
           <argument>
             <kind>1</kind>
             <string>//Initialize variables
+
+//Actual move speed and a max speed to prevent diagonal speed increases
 move_speed = 4
 max_speed = 4
+
+//What side is the player facing
 move_side = 0
 idle_side = 1
-range = 100
+
+//Player's interaction reach
+range = 20
+
+//Player paused value to stop the player in UI etc
+paused = false;
+
+//Inventory variable
+invent[0] = 0;
 </string>
           </argument>
         </arguments>
@@ -53,9 +65,18 @@ range = 100
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_player_keyboard_controls();
-//scr_player_change_sprites_while_moving();
-scr_check_collision_solid_block_old();
+            <string>if (paused){
+    move_speed = 0;
+    speed = 0;
+}
+else{
+    //Run our keyboard control script
+    scr_player_keyboard_controls();
+
+    //Run our collision checking script
+    scr_check_collision_solid_block_old();  
+}
+show_debug_message(invent);
 </string>
           </argument>
         </arguments>
@@ -78,12 +99,40 @@ scr_check_collision_solid_block_old();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if distance_to_object(obj_interactable) &lt; range{
-    obj = instance_nearest(x, y, obj_furnace);
-    obj.sprite_index = spr_furnace_used;
-    obj.drawUI = true;
+            <string>//Check if there is an interactable within range
+if (distance_to_object(obj_interactable) &lt; range){
+    //Toggle paused to false if it's true
+    if(paused){
+        paused = false;
+        move_speed = 4;
+    }
+    //Get the nearest instance of interactables
+    objParent = instance_nearest(x, y, obj_interactable);
+    
+    //With iterates through all instances of the parent and children objects
+    with(objParent){
+        
+        //Find the first instance that isn't the parent
+        if (object_index != obj_interactable){
+            
+            //Get a reference to the nearest object of that index
+            obj = instance_nearest(x, y, object_index);
+            
+            //If the object is a furnace change sprite and draw UI
+            if (object_index == obj_furnace){
+                if !obj.drawUI = true{
+                    obj.sprite_index = spr_furnace_used;
+                    obj.drawUI = true;
+                }
+                else{
+                    obj.sprite_index = spr_furnace;
+                    obj.drawUI = false;
+                }
+                break;
+            }
+        }
+    }
 }
-//hello github
 </string>
           </argument>
         </arguments>
