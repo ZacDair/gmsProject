@@ -40,6 +40,9 @@ range = 20
 
 //Player paused value to stop the player in UI etc
 paused = false;
+
+//Inventory variable
+invent[0] = 0;
 </string>
           </argument>
         </arguments>
@@ -71,14 +74,9 @@ else{
     scr_player_keyboard_controls();
 
     //Run our collision checking script
-    scr_check_collision_solid_block_old();
-    
-    //Find ore objects in range
-    if(distance_to_object(obj_ore) &lt; range){
-        obj = instance_nearest(x, y, obj_ore);
-        obj.inRange = true;    
-    }
+    scr_check_collision_solid_block_old();  
 }
+show_debug_message(invent);
 </string>
           </argument>
         </arguments>
