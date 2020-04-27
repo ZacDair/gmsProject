@@ -48,8 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(100, 100, "Hello");
-//string(currency)
+            <string>draw_text(10, 10, string(currency));
+draw_sprite(spr_currency, 0, 20, 0);
 </string>
           </argument>
         </arguments>
