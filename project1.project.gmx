@@ -23,6 +23,10 @@
     <sprite>sprites\spr_watered</sprite>
     <sprite>sprites\spr_cabbage</sprite>
     <sprite>sprites\spr_basket</sprite>
+    <sprite>sprites\spr_cabbage_inv</sprite>
+    <sprite>sprites\spr_cart</sprite>
+    <sprite>sprites\spr_cabbage_item</sprite>
+    <sprite>sprites\spr_currency</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -42,6 +46,8 @@
     <object>objects\obj_plot</object>
     <object>objects\obj_hotbar</object>
     <object>objects\obj_select_hotbar</object>
+    <object>objects\obj_cart</object>
+    <object>objects\obj_currency</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
