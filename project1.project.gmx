@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_invSlot</sprite>
     <sprite>sprites\spr_ore</sprite>
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_furnace</sprite>
