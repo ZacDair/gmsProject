@@ -27,6 +27,7 @@
     <sprite>sprites\spr_cart</sprite>
     <sprite>sprites\spr_cabbage_item</sprite>
     <sprite>sprites\spr_currency</sprite>
+    <sprite>sprites\spr_cabbageSeeds</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -48,6 +49,7 @@
     <object>objects\obj_select_hotbar</object>
     <object>objects\obj_cart</object>
     <object>objects\obj_currency</object>
+    <object>objects\obj_cabbageSeeds</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Farm</room>

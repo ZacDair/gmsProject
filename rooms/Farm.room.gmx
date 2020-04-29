@@ -76,6 +76,9 @@
     <instance objName="obj_select_hotbar" x="0" y="699" name="inst_B57D6F67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cart" x="768" y="512" name="inst_B1B47470" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_currency" x="64" y="32" name="inst_EC2991F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cabbageSeeds" x="352" y="448" name="inst_2D30D790" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cabbageSeeds" x="224" y="448" name="inst_B4551D72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_cabbageSeeds" x="256" y="320" name="inst_CBDA4554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

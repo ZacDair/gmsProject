@@ -76,7 +76,6 @@ else{
     //Run our collision checking script
     scr_check_collision_solid_block_old();  
 }
-show_debug_message(invent);
 </string>
           </argument>
         </arguments>
