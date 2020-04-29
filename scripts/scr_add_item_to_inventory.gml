@@ -1,4 +1,5 @@
-///scr_add_item_to_inventory
+///scr_add_item_to_inventory(sprite index)
+spriteIndex = argument[0];
 //Cycle through the inventory array
 for(i=0; i<array_length_1d(obj_player.invent); i+=1){
 
@@ -26,5 +27,6 @@ else{
     emptySlot = obj_player.invent[emptyIndex];
     emptySlot[0] = itemID;
     emptySlot[1] = 1;
+    emptySlot[2] = sprite_get_name(spriteIndex);
     obj_player.invent[emptyIndex] = emptySlot;
 }
