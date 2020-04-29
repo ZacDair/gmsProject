@@ -78,6 +78,7 @@
     <instance objName="obj_cabbageSeeds" x="352" y="448" name="inst_2D30D790" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cabbageSeeds" x="224" y="448" name="inst_B4551D72" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cabbageSeeds" x="256" y="320" name="inst_CBDA4554" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="32" y="352" name="inst_52C33C90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
