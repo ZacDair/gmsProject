@@ -145,7 +145,7 @@ if distance_to_object(obj_player) &lt; range{
         self.sprite_index = spr_ploughed;
         obj_hotbar.cabbage = 1;
         obj_hotbar.cabbage_count += 1;
-        instance_create(x, y, obj_cabbageSeeds);
+        instance_create(x - 16 + random(32), y - 16 + random(32), obj_cabbageSeeds);
     }
 }
 if(self.sprite_index = spr_ploughed){
