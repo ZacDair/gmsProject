@@ -53,10 +53,11 @@
     <object>objects\obj_currency</object>
     <object>objects\obj_cabbageSeeds</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_hoe</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\Farm</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
