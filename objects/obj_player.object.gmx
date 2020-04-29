@@ -28,8 +28,8 @@
             <string>//Initialize variables
 
 //Actual move speed and a max speed to prevent diagonal speed increases
-move_speed = 4
-max_speed = 4
+move_speed = 2
+max_speed = 2
 
 //What side is the player facing
 move_side = 0
@@ -43,14 +43,16 @@ paused = false;
 
 //Inventory variable
 invent = array_create(10);
-slot = array_create(2);
+
+//Slot is an array containing itemID, amount, sprite
+slot = array_create(3);
 slot[0] = "empty";
 slot[1] = "0";
+slot[2] = "none";
 //Add slots to the invent
 invent = scr_populate_inventory_with_slots(invent, slot);
 drawInventory = false;
 done = false;
-//added comment
 </string>
           </argument>
         </arguments>
@@ -108,12 +110,12 @@ else{
             <kind>1</kind>
             <string>if(drawInventory or done){
     yCoord = 100;
-    xCoord = 100;        
+    xCoord = 100;    
     for(i = 0; i&lt;array_length_1d(invent); i+=1){
         draw_sprite(spr_invSlot, 0, xCoord, yCoord);
-        slot = invent[i]
-        if(slot[0] == "ore_1"){
-            draw_sprite(spr_ore, 0, xCoord, yCoord);
+        slot = invent[i];
+        if(slot[0] != "empty"){
+            draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
         }
         xCoord += 31;
     }
@@ -204,6 +206,36 @@ if (distance_to_object(obj_interactable) &lt; range){
             }
         }
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(move_speed = 2){
+    move_speed = 6;
+    max_speed = 6;
+}
+else if(move_speed = 6){
+    move_speed = 2;
+    max_speed = 2;
 }
 </string>
           </argument>

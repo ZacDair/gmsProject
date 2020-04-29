@@ -63,7 +63,7 @@
           <argument>
             <kind>1</kind>
             <string>//run add item script
-scr_add_item_to_inventory();
+scr_add_item_to_inventory(sprite_index);
 </string>
           </argument>
         </arguments>
