@@ -3,4 +3,5 @@
 +-------------+-------------+
 |ore          |ore_1        |
 |cabbageSeeds |cabbageSeeds |
+|hoe          |hoe          |
 +-------------+-------------+
