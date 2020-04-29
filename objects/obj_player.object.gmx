@@ -42,7 +42,14 @@ range = 20
 paused = false;
 
 //Inventory variable
-invent[0] = 0;
+invent = array_create(10);
+slot = array_create(2);
+slot[0] = "empty";
+slot[1] = "0";
+//Add slots to the invent
+invent = scr_populate_inventory_with_slots(invent, slot);
+drawInventory = false;
+done = false;
 </string>
           </argument>
         </arguments>
@@ -76,7 +83,71 @@ else{
     //Run our collision checking script
     scr_check_collision_solid_block_old();  
 }
-show_debug_message(invent);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(drawInventory or done){
+    yCoord = 100;
+    xCoord = 100;        
+    for(i = 0; i&lt;array_length_1d(invent); i+=1){
+        draw_sprite(spr_invSlot, 0, xCoord, yCoord);
+        slot = invent[i]
+        if(slot[0] == "ore_1"){
+            draw_sprite(spr_ore, 0, xCoord, yCoord);
+        }
+        xCoord += 31;
+    }
+    done = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>show_debug_message(invent);
+if(drawInventory){
+    drawInventory = false;
+    done = false;
+}
+else{
+    drawInventory = true;
+}
 </string>
           </argument>
         </arguments>
