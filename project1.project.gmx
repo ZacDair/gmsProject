@@ -52,6 +52,7 @@
     <object>objects\obj_cart</object>
     <object>objects\obj_currency</object>
     <object>objects\obj_cabbageSeeds</object>
+    <object>objects\obj_player</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Farm</room>
