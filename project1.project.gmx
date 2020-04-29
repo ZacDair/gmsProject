@@ -32,6 +32,8 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_add_item_to_inventory.gml</script>
+    <script>scripts\scr_populate_inventory_with_slots.gml</script>
     <script>scripts\scr_player_change_sprites_while_moving.gml</script>
     <script>scripts\scr_player_keyboard_controls.gml</script>
     <script>scripts\scr_check_collision_solid_block_old.gml</script>

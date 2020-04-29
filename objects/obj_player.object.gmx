@@ -42,7 +42,12 @@ range = 20
 paused = false;
 
 //Inventory variable
-invent[0] = 0;
+invent = array_create(10);
+slot = array_create(2);
+slot[0] = "empty";
+slot[1] = "0";
+//Add slots to the invent
+invent = scr_populate_inventory_with_slots(invent, slot);
 drawInventory = false;
 done = false;
 </string>
@@ -103,8 +108,12 @@ else{
             <string>if(drawInventory or done){
     yCoord = 100;
     xCoord = 100;        
-    for(i = 0; i&lt;5; i+=1){
+    for(i = 0; i&lt;array_length_1d(invent); i+=1){
         draw_sprite(spr_invSlot, 0, xCoord, yCoord);
+        slot = invent[i]
+        if(slot[0] == "ore_1"){
+            draw_sprite(spr_ore, 0, xCoord, yCoord);
+        }
         xCoord += 31;
     }
     done = true;

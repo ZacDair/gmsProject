@@ -62,7 +62,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_player.invent[array_length_1d(obj_player.invent)] = itemID;
+            <string>//Run add item to inventory script
+scr_add_item_to_inventory();
 </string>
           </argument>
         </arguments>
