@@ -50,7 +50,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.sprite_index = spr_grass;
+            <string>if(self.sprite_index = spr_ploughed){
+    self.sprite_index = spr_grass;
+}
 </string>
           </argument>
         </arguments>
@@ -143,9 +145,12 @@ if distance_to_object(obj_player) &lt; range{
         self.sprite_index = spr_ploughed;
         obj_hotbar.cabbage = 1;
         obj_hotbar.cabbage_count += 1;
-        alarm_set(2, room_speed*3);
+        instance_create(x, y, obj_cabbageSeeds);
     }
 }
+if(self.sprite_index = spr_ploughed){
+        alarm_set(2, room_speed*10);
+    }
 </string>
           </argument>
         </arguments>
