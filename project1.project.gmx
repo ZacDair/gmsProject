@@ -6,6 +6,7 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprite>sprites\spr_invSlot</sprite>
     <sprite>sprites\spr_ore</sprite>
     <sprite>sprites\spr_player_right</sprite>
     <sprite>sprites\spr_furnace</sprite>
@@ -32,6 +33,8 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <script>scripts\scr_add_item_to_inventory.gml</script>
+    <script>scripts\scr_populate_inventory_with_slots.gml</script>
     <script>scripts\scr_player_change_sprites_while_moving.gml</script>
     <script>scripts\scr_player_keyboard_controls.gml</script>
     <script>scripts\scr_check_collision_solid_block_old.gml</script>
@@ -42,7 +45,6 @@
     <object>objects\obj_furnace</object>
     <object>objects\obj_item</object>
     <object>objects\obj_ore</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_floor</object>
     <object>objects\obj_plot</object>
     <object>objects\obj_hotbar</object>

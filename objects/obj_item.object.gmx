@@ -28,6 +28,7 @@
             <string>//Initialize Variables
 inRange = false;
 moveSpeed = 6;
+foundObj = false;
 </string>
           </argument>
         </arguments>
