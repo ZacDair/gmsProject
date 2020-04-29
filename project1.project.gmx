@@ -45,7 +45,7 @@
     <object>objects\obj_furnace</object>
     <object>objects\obj_item</object>
     <object>objects\obj_ore</object>
-    <object>objects\obj_floor</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_plot</object>
     <object>objects\obj_hotbar</object>
     <object>objects\obj_select_hotbar</object>
