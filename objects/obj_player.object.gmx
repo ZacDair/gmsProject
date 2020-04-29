@@ -50,6 +50,7 @@ slot[1] = "0";
 invent = scr_populate_inventory_with_slots(invent, slot);
 drawInventory = false;
 done = false;
+//added comment
 </string>
           </argument>
         </arguments>
