@@ -11,7 +11,8 @@ Current project idea, is to create a 2D isometric game featuring multiple profes
 **Zac** and **Michael** are personal dev branches.  
 
 ## Gamemaker Source Control Commands:
-*Commands Listed are as of 25/04/20*  
+*Commands Listed are as of 30/04/20*  
+*These commands may also be in a different order in gamemaker than seen here*  
 
 In Gamemaker there are a list of commands available in the source control section (available by right clicking on items).  
 
@@ -41,3 +42,7 @@ In Gamemaker there are a list of commands available in the source control sectio
 `Merge master Zac` - merges the contents of local master to Zac
 
 Currently manual merging into master is needed to update the master branch with the most up to date content from each branch - this can be done by creating a pull request on Github  
+
+`Pull from Michael` - pulls remote changes from the Michael branch into the local Michael branch  
+`Pull from Zac` - same as above but for remote and local Zac branches  
+`Discard changes` - removes any untracked (uncommited) changes that were made in the branch  
