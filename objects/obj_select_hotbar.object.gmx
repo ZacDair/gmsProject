@@ -25,12 +25,31 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>inventory = 1;
-/*
-count = 1;
-items[count] = "Hoe"
-count -= 1;
-items[count] = "Seeds"
+            <string>index = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>selectedSlot = obj_player.invent[index];
+selectedIndex = selectedSlot[0];
 </string>
           </argument>
         </arguments>
@@ -55,7 +74,7 @@ items[count] = "Seeds"
             <kind>1</kind>
             <string>if(self.x &gt; 0){
     self.x -= 70;
-    inventory-=1;
+    index-=1;
 }
 </string>
           </argument>
@@ -81,7 +100,7 @@ items[count] = "Seeds"
             <kind>1</kind>
             <string>if(self.x &lt; 950){
     self.x += 70;
-    inventory+=1;
+    index+=1;
 }
 </string>
           </argument>
