@@ -1,5 +1,6 @@
 ///scr_add_item_to_inventory(sprite index)
 spriteIndex = argument[0];
+foundObj = false;
 //Cycle through the inventory array
 for(i=0; i<array_length_1d(obj_player.invent); i+=1){
 

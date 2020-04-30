@@ -40,6 +40,8 @@
           <argument>
             <kind>1</kind>
             <string>itemID = "cabbageSeeds";
+//For testing
+scr_add_item_to_inventory(sprite_index);
 </string>
           </argument>
         </arguments>

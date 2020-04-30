@@ -40,6 +40,7 @@
     <script>scripts\scr_check_collision_solid_block_old.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_player</object>
     <object>objects\obj_debug</object>
     <object>objects\obj_interactable</object>
     <object>objects\obj_furnace</object>
@@ -52,8 +53,9 @@
     <object>objects\obj_cart</object>
     <object>objects\obj_currency</object>
     <object>objects\obj_cabbageSeeds</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_hoe</object>
+    <object>objects\obj_wateringCan</object>
+    <object>objects\obj_basket</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Farm</room>
