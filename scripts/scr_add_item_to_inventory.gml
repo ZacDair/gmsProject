@@ -1,13 +1,15 @@
 ///scr_add_item_to_inventory(sprite index)
 spriteIndex = argument[0];
 foundObj = false;
+foundEmpty = false;
 //Cycle through the inventory array
 for(i=0; i<array_length_1d(obj_player.invent); i+=1){
 
     //check if the first index of the slot is 0
     slot = obj_player.invent[i]
-    if(slot[0] == "empty"){
+    if(slot[0] == "empty" and !foundEmpty){
         emptyIndex = i;
+        foundEmpty = true;
     }
     //if its not empty check if it already contains this item's itemID
     else if(slot[0] == itemID){
