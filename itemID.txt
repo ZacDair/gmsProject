@@ -5,4 +5,5 @@
 |cabbageSeeds     |cabbageSeeds    |
 |hoe              |hoe             |
 |wateringCan      |wateringCan     |
+|basket           |basket          |
 +-----------------+----------------+
