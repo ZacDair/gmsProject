@@ -47,12 +47,21 @@ invent = array_create(10);
 //Slot is an array containing itemID, amount, sprite
 slot = array_create(3);
 slot[0] = "empty";
-slot[1] = "0";
+slot[1] = 0;
 slot[2] = "none";
 //Add slots to the invent
 invent = scr_populate_inventory_with_slots(invent, slot);
 drawInventory = false;
 done = false;
+/*
+//For testing purposes
+hoe = array_create(3);
+hoe[0] = "hoe";
+hoe[1] = 1;
+hoe[2] = "spr_hoe";
+
+seeds = array_create(3);
+seeds[0] = ""
 </string>
           </argument>
         </arguments>
