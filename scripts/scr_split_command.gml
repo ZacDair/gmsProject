@@ -36,4 +36,4 @@ for(i=1; i<= commandLen; i+=1;){
         res = "";
     }
 }
-show_debug_message(resArray);
+return(resArray);

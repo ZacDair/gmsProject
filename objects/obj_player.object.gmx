@@ -118,8 +118,8 @@ else{
           <argument>
             <kind>1</kind>
             <string>command = get_string("Enter command :",""); //Get input
-show_debug_message("Command was: " + command);
-scr_split_command("hello world this is a test   1 8 997 ");
+scr_run_command(command);
+
 </string>
           </argument>
         </arguments>
