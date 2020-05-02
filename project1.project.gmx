@@ -61,8 +61,8 @@
     <object>objects\obj_cabbage</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Farm</room>
     <room>rooms\room0</room>
+    <room>rooms\Farm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
