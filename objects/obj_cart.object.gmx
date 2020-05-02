@@ -75,15 +75,16 @@ sell_cabbage = 0;
           <argument>
             <kind>1</kind>
             <string>range = 5;
-if(distance_to_object(obj_player) &lt; range &amp;&amp; obj_select_hotbar.inventory = 5 &amp;&amp; obj_hotbar.cabbage_count &gt; 0){
-    obj_hotbar.cabbage_count -= 1;
+if(distance_to_object(obj_player) &lt; range &amp;&amp; obj_select_hotbar.selectedIndex = "cabbage" &amp;&amp; obj_select_hotbar.selectedAmount &gt; 0){
+    dc = obj_player.invent[obj_select_hotbar.index]; 
+    dc[1] -= 1;
     sell_cabbage += 1;
 }
-
+/*
 if(obj_hotbar.cabbage_count = 0){
     obj_hotbar.cabbage = 0;
 }
-
+*/
 if(sell_cabbage &gt; 0){
     alarm_set(0, room_speed*3);
 }

@@ -56,10 +56,11 @@
     <object>objects\obj_hoe</object>
     <object>objects\obj_wateringCan</object>
     <object>objects\obj_basket</object>
+    <object>objects\obj_cabbage</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
     <room>rooms\Farm</room>
+    <room>rooms\room0</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
