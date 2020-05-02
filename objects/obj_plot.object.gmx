@@ -123,29 +123,31 @@
             <kind>1</kind>
             <string>range = 5;
 if distance_to_object(obj_player) &lt; range{
-    if(obj_select_hotbar.inventory = 1){
+    if(obj_select_hotbar.selectedIndex = "hoe"){
         self.sprite_index = spr_ploughed;
     }
-    if(self.sprite_index = spr_ploughed &amp;&amp; obj_select_hotbar.inventory = 2){
+    else if(self.sprite_index = spr_ploughed &amp;&amp; obj_select_hotbar.selectedIndex = "cabbageSeeds"){
         self.sprite_index = spr_seeded;
     }
-    if(self.sprite_index = spr_seeded &amp;&amp; obj_select_hotbar.inventory = 3){
+    else if(self.sprite_index = spr_seeded &amp;&amp; obj_select_hotbar.selectedIndex = "wateringCan"){
         if(times_watered &lt; 3){
             self.sprite_index = spr_watered;
             times_watered += 1;
             alarm_set(0, room_speed);
         }
-        if(times_watered = 3){
+        else if(times_watered = 3){
             times_watered = 0;
             self.sprite_index = spr_watered;
             alarm_set(1, room_speed);
         }
     }
-    if(obj_select_hotbar.inventory = 4 &amp;&amp; self.sprite_index = spr_cabbage){
+    else if(obj_select_hotbar.selectedIndex = "basket" &amp;&amp; self.sprite_index = spr_cabbage){
         self.sprite_index = spr_ploughed;
-        obj_hotbar.cabbage = 1;
-        obj_hotbar.cabbage_count += 1;
+        //obj_hotbar.cabbage = 1;
+        //obj_hotbar.cabbage_count += 1;
         instance_create(x - 16 + random(32), y - 16 + random(32), obj_cabbageSeeds);
+        instance_create(x - 16 + random(32), y - 16 + random(32), obj_cabbage);
+        show_debug_message("Harvested");
     }
 }
 if(self.sprite_index = spr_ploughed){

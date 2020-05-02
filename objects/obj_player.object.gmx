@@ -142,7 +142,17 @@ scr_run_command(command);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(drawInventory or done){
+            <string>    yCoord = 700;
+    xCoord = 3;    
+    for(i = 0; i&lt;10; i+=1){
+        slot = invent[i];
+        if(slot[0] != "empty"){
+            draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+        }
+        xCoord += 70;
+    }
+
+if(drawInventory or done){
     yCoord = 100;
     xCoord = 100;    
     for(i = 0; i&lt;array_length_1d(invent); i+=1){
