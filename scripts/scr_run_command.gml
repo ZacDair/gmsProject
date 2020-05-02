@@ -2,13 +2,18 @@
 command = argument[0];
 if(command != ""){
     commandList = scr_split_command(command);
-    show_debug_message("Command Passed: " + commandList[0]);
-    show_debug_message("Arguments Passed (each argument is on a new line):")
-    for(i=1; i<array_length_1d(commandList); i+=1){
-        show_debug_message(commandList[i]);
+    switch(commandList[0]){
+        //help
+        case "help":
+            show_debug_message("List of commands will be shown here");
+            break;
+            
+        //Unknown Command
+        default:
+            show_debug_message("Command " + commandList[0] + ' is unrecognized. For a list of commands, see "help".');
+            break; 
     }
-    show_debug_message("Command Processing Done");
 }
 else{
-    show_debug_message("no command entered");
+    show_debug_message("No command entered");
 }
