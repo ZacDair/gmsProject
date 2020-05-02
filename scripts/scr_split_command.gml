@@ -14,7 +14,6 @@ res = "";
 commandLen = string_length(command);
 for(i=1; i<= commandLen; i+=1;){
     currentLetter = string_char_at(command, i);
-    
     //If the current letter isn't equal to the needle and we aren't at the end of the command
     if(currentLetter != needle and i != commandLen){
         
@@ -30,7 +29,8 @@ for(i=1; i<= commandLen; i+=1;){
     }
     
     //If the current letter is equal to the needle, store the current result in our resArray
-    else if(res != ""){    
+    else{
+        res = res + currentLetter;
         resArray[arrayIndex] = res;
         arrayIndex += 1;
         res = "";

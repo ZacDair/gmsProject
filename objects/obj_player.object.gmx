@@ -42,7 +42,8 @@ range = 20
 paused = false;
 
 //Inventory variable
-invent = array_create(10);
+inventSize = 40;
+invent = array_create(inventSize);
 
 //Slot is an array containing itemID, amount, sprite
 slot = array_create(3);
@@ -95,6 +96,22 @@ else{
     //Run our collision checking script
     scr_check_collision_solid_block_old();  
 }
+
+//check to see if an object needs to be removed from the inventory
+//cycle through the hotbar length (10)
+for(i=0; i &lt; 10; i+=1){
+    slot = invent[i];
+    //if the slot isnt empty check and see if the amount is 0 or less than
+    if(slot[0] != "empty"){
+        if(slot[1] == 0){
+            slot[0] = "empty";
+            slot[2] = "none";
+            invent[i] = slot;
+        }
+    }
+
+
+}
 </string>
           </argument>
         </arguments>
@@ -142,26 +159,33 @@ scr_run_command(command);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>    yCoord = 700;
-    xCoord = 3;    
-    for(i = 0; i&lt;10; i+=1){
-        slot = invent[i];
-        if(slot[0] != "empty"){
-            draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
-        }
-        xCoord += 70;
+            <string>//Hotbar
+yCoord = 700;
+xCoord = 3;    
+for(i = 0; i&lt;10; i+=1){
+    slot = invent[i];
+    if(slot[0] != "empty"){
+    draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
     }
+    xCoord += 70;
+}
 
+//Player inventory
 if(drawInventory or done){
     yCoord = 100;
-    xCoord = 100;    
-    for(i = 0; i&lt;array_length_1d(invent); i+=1){
-        draw_sprite(spr_invSlot, 0, xCoord, yCoord);
-        slot = invent[i];
-        if(slot[0] != "empty"){
-            draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+    slotCount = 0;
+    for(yIndex = 0; yIndex &lt; 4; yIndex+=1){
+        xCoord = 100;    
+        for(xIndex = 0; xIndex &lt; 10; xIndex+=1){
+            draw_sprite(spr_invSlot, 0, xCoord, yCoord);
+            slot = invent[slotCount];
+            if(slot[0] != "empty"){
+                draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+            }
+            slotCount +=1;
+            xCoord += 31;
         }
-        xCoord += 31;
+        yCoord += 31;
     }
     done = true;
 }

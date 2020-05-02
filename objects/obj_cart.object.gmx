@@ -76,8 +76,9 @@ sell_cabbage = 0;
             <kind>1</kind>
             <string>range = 5;
 if(distance_to_object(obj_player) &lt; range &amp;&amp; obj_select_hotbar.selectedIndex = "cabbage" &amp;&amp; obj_select_hotbar.selectedAmount &gt; 0){
-    dc = obj_player.invent[obj_select_hotbar.index]; 
-    dc[1] -= 1;
+    slot = obj_player.invent[obj_select_hotbar.index]; 
+    slot[1] -= 1;
+    obj_player.invent[obj_select_hotbar.index] = slot;
     sell_cabbage += 1;
 }
 /*

@@ -15,7 +15,7 @@ for(i=0; i<array_length_1d(obj_player.invent); i+=1){
         foundEmpty = true;
     }
     //if its not empty check if it already contains this item's itemID
-    else if(slot[0] == itemID){
+    else if(slot[0] == objItemID){
         objIndex = i;
         foundObj = true;
     }
