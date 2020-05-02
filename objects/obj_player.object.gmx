@@ -103,9 +103,10 @@ for(i=0; i &lt; 10; i+=1){
     slot = invent[i];
     //if the slot isnt empty check and see if the amount is 0 or less than
     if(slot[0] != "empty"){
-        if(slot[1] == 0 or slot[1] &lt; 0){
+        if(slot[1] == 0){
             slot[0] = "empty";
             slot[2] = "none";
+            invent[i] = slot;
         }
     }
 
@@ -210,7 +211,7 @@ if(drawInventory or done){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//show_debug_message(invent);
+            <string>show_debug_message(invent);
 if(drawInventory){
     drawInventory = false;
     done = false;
