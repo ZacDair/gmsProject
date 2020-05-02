@@ -6,4 +6,5 @@
 |hoe              |hoe             |
 |wateringCan      |wateringCan     |
 |basket           |basket          |
+|cabbage          |cabbage         |
 +-----------------+----------------+
