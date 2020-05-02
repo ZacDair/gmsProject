@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>itemID = "wateringCan";
+amount = 1;
 //For testing
 scr_add_item_to_inventory(itemID, amount, sprite_index);
 </string>

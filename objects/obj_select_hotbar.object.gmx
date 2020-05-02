@@ -99,7 +99,7 @@ selectedAmount = selectedSlot[1];
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(self.x &lt; 950){
+            <string>if(self.x &lt; 600){
     self.x += 70;
     index+=1;
 }
