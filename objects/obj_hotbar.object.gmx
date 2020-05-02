@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>cabbage_count = 0;
+            <string>/*
+cabbage_count = 0;
 cabbage = 0;
 </string>
           </argument>
@@ -50,10 +51,11 @@ cabbage = 0;
           <argument>
             <kind>1</kind>
             <string>draw_sprite(spr_hotbar, 0, 0, 704);
-draw_sprite(spr_hoe, 0, 3, 700);
-draw_sprite(spr_seeds, 0, 73, 700);
-draw_sprite(spr_water, 0, 143, 700);
-draw_sprite(spr_basket, 0, 213, 700);
+//draw_sprite(spr_hoe, 0, 3, 700);
+//draw_sprite(spr_seeds, 0, 73, 700);
+//draw_sprite(spr_water, 0, 143, 700);
+//draw_sprite(spr_basket, 0, 213, 700);
+/*
 if(cabbage = 1){
     draw_sprite(spr_cabbage_inv, 0, 283, 700);    
 }
