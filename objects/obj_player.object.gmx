@@ -96,6 +96,21 @@ else{
     //Run our collision checking script
     scr_check_collision_solid_block_old();  
 }
+
+//check to see if an object needs to be removed from the inventory
+//cycle through the hotbar length (10)
+for(i=0; i &lt; 10; i+=1){
+    slot = invent[i];
+    //if the slot isnt empty check and see if the amount is 0 or less than
+    if(slot[0] != "empty"){
+        if(slot[1] == 0 or slot[1] &lt; 0){
+            slot[0] = "empty";
+            slot[2] = "none";
+        }
+    }
+
+
+}
 </string>
           </argument>
         </arguments>
