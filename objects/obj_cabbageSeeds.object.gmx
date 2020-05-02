@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>itemID = "cabbageSeeds";
+amount = 5;
 //For testing
 scr_add_item_to_inventory(itemID, amount, sprite_index);
 </string>
