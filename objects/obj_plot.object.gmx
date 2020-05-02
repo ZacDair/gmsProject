@@ -145,8 +145,10 @@ if distance_to_object(obj_player) &lt; range{
         self.sprite_index = spr_ploughed;
         //obj_hotbar.cabbage = 1;
         //obj_hotbar.cabbage_count += 1;
-        instance_create(x - 16 + random(32), y - 16 + random(32), obj_cabbageSeeds);
-        instance_create(x - 16 + random(32), y - 16 + random(32), obj_cabbage);
+        plotX = x - 16 + random(32);
+        plotY = y - 16 + random(32);
+        instance_create(plotX, plotY, obj_cabbageSeeds);
+        instance_create(plotX, plotY, obj_cabbage);
         show_debug_message("Harvested");
     }
 }
