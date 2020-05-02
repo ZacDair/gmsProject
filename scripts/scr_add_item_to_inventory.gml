@@ -1,7 +1,10 @@
-///scr_add_item_to_inventory(sprite index)
-spriteIndex = argument[0];
+///scr_add_item_to_inventory(itemID, amount, sprite index)
+objItemID = argument[0];
+objAmount= argument[1];
+spriteIndex = argument[2];
 foundObj = false;
 foundEmpty = false;
+
 //Cycle through the inventory array
 for(i=0; i<array_length_1d(obj_player.invent); i+=1){
 
@@ -21,15 +24,15 @@ for(i=0; i<array_length_1d(obj_player.invent); i+=1){
 //if we have found an occurence of the item add 1 to the amount part of the slot
 if(foundObj){
     objSlot = obj_player.invent[objIndex]
-    objSlot[1] += 1;
+    objSlot[1] += objAmount;
     obj_player.invent[objIndex] = objSlot;
 }
 
 //if there was no occurence of the item use the first empty slot, add the itemID and 1 for the amount
 else{
     emptySlot = obj_player.invent[emptyIndex];
-    emptySlot[0] = itemID;
-    emptySlot[1] = 1;
+    emptySlot[0] = objItemID;
+    emptySlot[1] = objAmount;
     emptySlot[2] = sprite_get_name(spriteIndex);
     obj_player.invent[emptyIndex] = emptySlot;
 }
