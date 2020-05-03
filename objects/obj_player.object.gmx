@@ -166,6 +166,7 @@ for(i = 0; i&lt;10; i+=1){
     slot = invent[i];
     if(slot[0] != "empty"){
     draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+    draw_text(xCoord, yCoord, slot[1])
     }
     xCoord += 70;
 }
@@ -181,6 +182,7 @@ if(drawInventory or done){
             slot = invent[slotCount];
             if(slot[0] != "empty"){
                 draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+                draw_text(xCoord, yCoord, slot[1])
             }
             slotCount +=1;
             xCoord += 31;
