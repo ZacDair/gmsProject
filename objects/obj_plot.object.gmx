@@ -3,7 +3,7 @@
   <spriteName>spr_grass</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>1</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -147,6 +147,8 @@ if distance_to_object(obj_player) &lt; range{
         //obj_hotbar.cabbage_count += 1;
         plotX = x - 16 + random(32);
         plotY = y - 16 + random(32);
+        plotX = 100;
+        plotY = 100;
         instance_create(plotX, plotY, obj_cabbageSeeds);
         instance_create(plotX, plotY, obj_cabbage);
         show_debug_message("Harvested");

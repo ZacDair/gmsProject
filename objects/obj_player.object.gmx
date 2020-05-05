@@ -53,16 +53,6 @@ slot[2] = "none";
 //Add slots to the invent
 invent = scr_populate_inventory_with_slots(invent, slot);
 drawInventory = false;
-done = false;
-/*
-//For testing purposes
-hoe = array_create(3);
-hoe[0] = "hoe";
-hoe[1] = 1;
-hoe[2] = "spr_hoe";
-
-seeds = array_create(3);
-seeds[0] = ""
 </string>
           </argument>
         </arguments>
@@ -165,18 +155,21 @@ xCoord = 3;
 for(i = 0; i&lt;10; i+=1){
     slot = invent[i];
     if(slot[0] != "empty"){
-    draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
-    draw_text(xCoord, yCoord, slot[1])
+        draw_sprite(asset_get_index(slot[2]), 0, xCoord, yCoord);
+        draw_text(xCoord, yCoord, slot[1])
     }
     xCoord += 70;
 }
 
-//Player inventory
+//Player inventory code may be removed as it's now handled by the inventoryController and invSlot objects
+/*
 if(drawInventory or done){
     yCoord = 100;
+    obj_inventoryController.startingY = yCoord;
     slotCount = 0;
     for(yIndex = 0; yIndex &lt; 4; yIndex+=1){
-        xCoord = 100;    
+        xCoord = 100;
+        obj_inventoryController.startingX = xCoord;
         for(xIndex = 0; xIndex &lt; 10; xIndex+=1){
             draw_sprite(spr_invSlot, 0, xCoord, yCoord);
             slot = invent[slotCount];
@@ -191,6 +184,7 @@ if(drawInventory or done){
     }
     done = true;
 }
+*/
 </string>
           </argument>
         </arguments>
@@ -213,13 +207,18 @@ if(drawInventory or done){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(invent);
+            <string>//Show the invent variable
+show_debug_message(invent);
+
+//Toggle variables to draw the inventory
 if(drawInventory){
     drawInventory = false;
-    done = false;
+    obj_inventoryController.drawUI = false;
 }
 else{
     drawInventory = true;
+    instance_create(0, 0, obj_inventoryController);
+    obj_inventoryController.drawUI = true;
 }
 </string>
           </argument>

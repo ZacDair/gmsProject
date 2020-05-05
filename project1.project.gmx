@@ -42,6 +42,8 @@
     <script>scripts\scr_check_collision_solid_block_old.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\obj_invSlot</object>
+    <object>objects\obj_inventoryController</object>
     <object>objects\obj_player</object>
     <object>objects\obj_debug</object>
     <object>objects\obj_interactable</object>
