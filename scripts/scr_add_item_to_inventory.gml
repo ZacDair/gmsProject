@@ -39,6 +39,7 @@ else{
 
 //If there is an inventoryController set drawUI to true to redraw the ui
 if(instance_exists(obj_inventoryController)){
-    obj_inventoryController.drawUI = true;
+    obj_inventoryController.drawUI = true;    
     obj_inventoryController.done = false;
+    instance_destroy(obj_invSlot)
 }
