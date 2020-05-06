@@ -36,6 +36,7 @@
     <script>scripts\scr_split_command.gml</script>
     <script>scripts\scr_run_command.gml</script>
     <script>scripts\scr_add_item_to_inventory.gml</script>
+    <script>scripts\scr_swap_item_slots.gml</script>
     <script>scripts\scr_populate_inventory_with_slots.gml</script>
     <script>scripts\scr_player_change_sprites_while_moving.gml</script>
     <script>scripts\scr_player_keyboard_controls.gml</script>
@@ -63,8 +64,8 @@
     <object>objects\obj_cabbage</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Farm</room>
     <room>rooms\room0</room>
+    <room>rooms\Farm</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

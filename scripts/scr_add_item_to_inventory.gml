@@ -36,3 +36,9 @@ else{
     emptySlot[2] = sprite_get_name(spriteIndex);
     obj_player.invent[emptyIndex] = emptySlot;
 }
+
+//If there is an inventoryController set drawUI to true to redraw the ui
+if(instance_exists(obj_inventoryController)){
+    obj_inventoryController.drawUI = true;
+    obj_inventoryController.done = false;
+}
