@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message("invent controller active");
-drawUI = false;
+            <string>drawUI = false;
+done = false;
 </string>
           </argument>
         </arguments>
@@ -50,16 +50,23 @@ drawUI = false;
           <argument>
             <kind>1</kind>
             <string>//Player inventory
-if(drawUI){
+if(drawUI or done){
     yCoord = 100;
     slotCount = 0;
+    
+    //Cycle 4 times incrementing the y index (rows)
     for(yIndex = 0; yIndex &lt; 4; yIndex+=1){
         xCoord = 100;
+        
+        //Cycle 10 times incrementing the x index (columns)
         for(xIndex = 0; xIndex &lt; 10; xIndex+=1){
+        
+            //Create an instance of the invSlot object
             objSlot = instance_create(xCoord, yCoord, obj_invSlot);
+            
+            //Get the slot data from the player's inventory list
             slot = obj_player.invent[slotCount];
             if(slot[0] != "empty"){
-                objSlot.draw = true;
                 objSlot.itemID = slot[0];
                 objSlot.amount = slot[1];
                 objSlot.sprite = asset_get_index(slot[2]);
@@ -69,6 +76,7 @@ if(drawUI){
         }
         yCoord += 31;
     }
+    done = true;
 }
 else{
     instance_destroy(obj_invSlot);

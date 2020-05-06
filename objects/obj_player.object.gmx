@@ -214,6 +214,7 @@ show_debug_message(invent);
 if(drawInventory){
     drawInventory = false;
     obj_inventoryController.drawUI = false;
+    obj_inventoryController.done = false;
 }
 else{
     drawInventory = true;
