@@ -41,5 +41,6 @@ else{
 if(instance_exists(obj_inventoryController)){
     obj_inventoryController.drawUI = true;    
     obj_inventoryController.done = false;
+    obj_inventoryController.holdingID = "empty";
     instance_destroy(obj_invSlot)
 }

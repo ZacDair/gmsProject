@@ -49,8 +49,15 @@
           <argument>
             <kind>1</kind>
             <string>selectedSlot = obj_player.invent[index];
-selectedIndex = selectedSlot[0];
+selectedIndex = selectedSlot[0]; //selectedIndex should be renamed to selectedID or itemID
 selectedAmount = selectedSlot[1];
+
+//A way of triggering functionality based on which item is selected
+if(selectedIndex == "bow"){
+    with(obj_bow){
+        event_user(0);
+    }
+}
 </string>
           </argument>
         </arguments>
